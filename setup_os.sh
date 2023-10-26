@@ -8,7 +8,7 @@ echo "###########################"
 
 # locale
 echo "Setting locale..."
-LOCALE_VALUE="en_AU.UTF-8"
+LOCALE_VALUE="en_US.UTF-8"
 echo ">>> locale-gen..."
 locale-gen ${LOCALE_VALUE}
 cat /etc/default/locale
@@ -21,7 +21,7 @@ sed -e '/SendEnv/ s/^#*/#/' -i /etc/ssh/ssh_config
 
 # timezone
 echo "Setting timezone..."
-timedatectl set-timezone Australia/Sydney
+timedatectl set-timezone America/New_York
 
 
 # patch
