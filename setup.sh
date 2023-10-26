@@ -120,7 +120,7 @@ fi
 
 # Setup OS
 info "Fetching setup script..."
-wget -qL https://raw.githubusercontent.com/noofny/proxmox_bitwarden/master/setup_os.sh
+wget -qL https://raw.githubusercontent.com/ImNotNikola/proxmox_bitwarden/master/setup_os.sh
 info "Executing script..."
 pct push "${CONTAINER_ID}" ./setup_os.sh /setup_os.sh -perms 755
 pct exec "${CONTAINER_ID}" -- bash -c "/setup_os.sh"
@@ -129,7 +129,7 @@ pct reboot "${CONTAINER_ID}"
 
 # Setup docker
 info "Fetching setup script..."
-wget -qL https://raw.githubusercontent.com/noofny/proxmox_bitwarden/master/setup_docker.sh
+wget -qL https://raw.githubusercontent.com/ImNotNikola/proxmox_bitwarden/master/setup_docker.sh
 info "Executing script..."
 cat ./setup_docker.sh
 pct push "${CONTAINER_ID}" ./setup_docker.sh /setup_docker.sh -perms 755
@@ -139,7 +139,7 @@ pct reboot "${CONTAINER_ID}"
 
 # Setup Bitwarden
 info "Fetching setup script..."
-wget -qL https://raw.githubusercontent.com/noofny/proxmox_bitwarden/master/setup_bitwarden.sh
+wget -qL https://raw.githubusercontent.com/ImNotNikola/proxmox_bitwarden/master/setup_bitwarden.sh
 info "Executing script..."
 pct push "${CONTAINER_ID}" ./setup_bitwarden.sh /setup_bitwarden.sh -perms 755
 pct exec "${CONTAINER_ID}" -- bash -c "/setup_bitwarden.sh"
