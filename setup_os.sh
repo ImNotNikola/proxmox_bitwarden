@@ -24,18 +24,9 @@ echo "Setting timezone..."
 timedatectl set-timezone America/New_York
 
 
-# patch
-echo "Patching..."
-apt update && apt upgrade -y
-
-
 # packages
 echo "Installing packages..."
-apt update && apt install -y \
-    curl \
-    wget \
-    htop \
-    net-tools
+ apt install -y curl wget htop net-tools
 
 
 # firewall
