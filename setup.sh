@@ -24,7 +24,7 @@ echo "###########################"
 
 TEMP_FOLDER_PATH=$(mktemp -d)
 pushd $TEMP_FOLDER_PATH >/dev/null
-DEFAULT_CONTAINER_ID='109'
+CONTAINER_ID='109'
 
 # prompts/args
 # DEFAULT_HOSTNAME='vault-1'
