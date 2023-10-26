@@ -59,7 +59,7 @@ export DOMAIN_NAME=${DOMAIN_NAME}
 # TODO: make this dynamic so the user can choose!
 CONTAINER_OS_TYPE='ubuntu'
 CONTAINER_OS_VERSION='ubuntu-22.04-standard_22.04-1_amd64.tar.zst'
-TEMPLATE_LOCATION="remote:vztmpl/${CONTAINER_OS_VERSION}"
+TEMPLATE_LOCATION="local:vztmpl/${CONTAINER_OS_VERSION}"
 info "Using template: ${TEMPLATE_LOCATION}"
 
 
